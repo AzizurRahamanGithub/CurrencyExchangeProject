@@ -1,0 +1,66 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+# node modules (dependencies)
+node_modules/
+
+# build output (production/dist folder)
+
+# Vite cache
+.vite/
+
+# environment variables
+.env
+.env.*.local
+
+# lock files (optional, if you're only using one type)
+package-lock.json
+# or
+# yarn.lock
+# pnpm-lock.yaml
+
+# OS-specific
+.DS_Store
+
+# IDE-specific
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# optional: coverage report if using testing tools
+coverage/
+
+# tailwind output cache (optional, if you enabled JIT mode caching)
+.tailwind/
+
+# temporary files
+*.tmp
+*.temp
