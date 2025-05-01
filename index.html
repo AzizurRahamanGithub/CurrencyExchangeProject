@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/CurrencyExchangeProject/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite + TS</title>
+		<script type="module" crossorigin src="/CurrencyExchangeProject/assets/index-BVNxNTYq.js"></script>
+		<link rel="stylesheet" crossorigin href="/CurrencyExchangeProject/assets/index-DLb9tPaw.css">
+	</head>
+	<body class="flex items-center justify-center min-h-screen bg-neutral-700 ">
+		<div
+			class="flex  flex-col w-[700px] bg-white border border-gray-200  rounded-xl dark:bg-neutral-700 dark:border-neutral-600 dark:shadow-neutral-700/70 "
+		>
+			.
+			<div class="p-4 md:p-5 shadow-2xl shadow-black">
+				<h3 class="font-bold text-shadow-lg text-shadow-black mb-6 text-gray-800 dark:text-white text-center text-2xl">Currency Exchange</h3>
+
+				<!-- Input Number -->
+				<div
+					class="py-2 px-3 bg-gray-100 rounded-lg shadow-sm shadow-black dark:bg-neutral-700"
+					data-hs-input-number=""
+				>
+					<div class="w-full flex justify-between items-center gap-x-5">
+						<div class="grow">
+							<input id="quantity" type="number" value="1"
+								class="text-shadow-lg text-shadow-black w-full p-0 text-xl bg-transparent border-0 outline-0 text-gray-500 focus:ring-0 [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none dark:text-white"
+								placeholder="ex: 10"
+							/>
+						</div>
+						<div class="flex justify-end items-center gap-x-1.5">
+							<button
+								type="button"  id="dn_btn"
+								class="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+								tabindex="-1"
+								aria-label="Decrease"
+								data-hs-input-number-decrement=""
+							>
+								<svg
+									class="shrink-0 size-3.5"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M5 12h14"></path>
+								</svg>
+							</button>
+							<button
+								type="button" id="in_btn"
+								class="size-6 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-md border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 focus:outline-hidden focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+								tabindex="-1"
+								aria-label="Increase"
+								data-hs-input-number-increment=""
+							>
+								<svg
+									class="shrink-0 size-3.5"
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path d="M5 12h14"></path>
+									<path d="M12 5v14"></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<!-- End Input Number -->
+
+				<div class="mt-10 flex justify-between w-full *:w-32">
+					<div class="w-[50%] bg-neutral-700 shadow-sm shadow-black rounded-md">
+						<input
+							type="text" id="LeftCur" autocomplete="off" maxlength="3"
+							class="text-gray-200 text-shadow-md text-shadow-black py-2.5 uppercase sm:py-3 px-4 block w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-400 disabled:opacity-50 disabled:pointer-events-none"
+							placeholder="ex: USD"
+						/>
+					</div>
+
+          <div class="flex w-[50%] bg-neutral-700 shadow-sm shadow-black rounded-md">
+						<input
+							type="text" id="ReftCur" autocomplete="off" maxlength="3"
+							class=" py-2.5 sm:py-3 text-shadow-md text-shadow-black px-4 text-gray-200 block uppercase w-full border-gray-200 rounded-lg sm:text-sm focus:border-blue-500 focus:ring-blue-500 placeholder:text-gray-400 disabled:opacity-50 disabled:pointer-events-none"
+							placeholder="ex: BDT"
+						/>
+					</div>
+				</div>
+
+				<div class="flex justify-between items-center *:w-44">
+					<div class="">
+						<div class="flex items-center gap-2  text-3xl font-semibold text-gray-200">
+							<img class=" " id="l-flag" src="https://flagsapi.com/US/flat/64.png" />
+							<h3  class="text-xl  text-shadow-lg text-shadow-black" id="Lcountry-name">USD</h3>
+							<h1 id="l-hide-text " class="hidden text-shadow-md text-shadow-black text-xs">No Match Found</h1>
+						</div>
+
+						<select id="left-select-country"
+							class="text-shadow-md text-shadow-black py-3 px-4 pe-9 block w-full shadow-sm shadow-black border-black rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:border-neutral-500 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+						>
+						<option value="All">Select</option>
+							
+						</select>
+					</div>
+
+					<h1 class="text-gray-100 font-bold text-shadow-lg text-shadow-black text-center text-xl w-full mb-10">From  -> To</h1>
+
+					<div class="">
+						<div class="flex items-center gap-2 text-3xl font-semibold text-gray-200">
+							<img id="r-flag" src="https://flagsapi.com/BD/flat/64.png" />
+							<h3  class="text-xl text-shadow-md text-shadow-black" id="Rcountry-name">BDT</h3>
+							<h1 id="r-hide-text" class="hidden text-shadow-md text-shadow-black text-xs">No Match Found</h1>
+						</div>
+
+						<select id="right-select-country" 
+							class="py-3 px-4 text-shadow-md text-shadow-black pe-9 block w-full shadow-sm shadow-black border-black rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-700 dark:border-neutral-500 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+						>
+							<option value="All">Select</option>
+						</select>
+					</div>
+				</div>
+
+				<button id="convert-btn"
+					class="mt-8 py-2 px-3 shadow-md shadow-black inline-flex justify-center items-center gap-x-2 text-sm rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none font-bold"
+					href="#"
+				>
+					Convert
+				</button>
+
+				<h2 class="font-semibold text-shadow-md text-shadow-black mt-7 text-green-800 dark:text-white text-[16px]">
+					Cureent rate is: <span id="exchange-rate" class="ml-3 text-shadow-md text-shadow-black text-center w-full  text-[24px]"></span>
+				</h2>
+			</div>
+		</div>
+
+	</body>
+</html>
